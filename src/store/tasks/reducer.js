@@ -1,8 +1,8 @@
 export const initialState = {
   tasks: [
-    { title: "title 1", description: "smfsmefs,ef,sk,ef", id: 1 },
-    { title: "title 2", description: "smfsmefs,ef,sk,ef", id: 2 },
-    { title: "title 3", description: "smfsmefs,ef,sk,ef", id: 3 },
+    { title: "title 1", description: "smfsmefs,ef,sk,ef", id: "1" },
+    { title: "title 2", description: "smfsmefs,ef,sk,ef", id: "2" },
+    { title: "title 3", description: "smfsmefs,ef,sk,ef", id: "3" },
   ],
   waiting: false, // признак ожидания загрузки
 };
@@ -21,7 +21,7 @@ function reducer(state = initialState, action) {
         ...state,
         tasks: [
           ...state.tasks,
-          { ...action.payload.task, id: state.tasks.length + 1 },
+          { ...action.payload.task, id: `${state.tasks.length} + 1` },
         ],
       };
 

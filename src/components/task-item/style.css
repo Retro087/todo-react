@@ -1,0 +1,57 @@
+.TaskItem{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.block{
+    width:70%;
+    margin: 0 auto;
+    height: 225px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.buttons-block{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.TaskItem-btn-done{
+    background-color: #B3F08E;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.TaskItem-btn{
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    height: 55px;
+    background-color: #F48A8A;
+    width: 200px;
+    transition: 0.2s;
+}
+
+.TaskItem-btn:hover{
+    background-color: #e45959;
+    transition: 0.2s;
+}
+
+.TaskItem-btn-done:hover{
+    transition: 0.2s;
+    background-color: #65F010;
+}
+
+.not-found{
+    font-size: 20px;
+}
