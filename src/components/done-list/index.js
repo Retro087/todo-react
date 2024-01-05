@@ -1,18 +1,16 @@
 import React from "react";
-import "./style.css";
-import TaskItem from "../task-item-short";
 import TaskItemShort from "../task-item-short";
-
-let TasksList = (props) => {
+import "./style.css";
+let DoneList = (props) => {
   return (
-    <div className="TasksList">
-      <h1 className="title">Задачи</h1>
-      {props.tasks.length ? (
-        props.tasks.map((item, i) => {
+    <div className="DoneList">
+      <h1 className="title">Выполненные задачи</h1>
+      {props.done.length ? (
+        props.done.map((item, i) => {
           return (
             <TaskItemShort
-              done={props.done}
               key={i}
+              isDone={true}
               delete={props.delete}
               item={item}
             />
@@ -25,4 +23,4 @@ let TasksList = (props) => {
   );
 };
 
-export default TasksList;
+export default DoneList;

@@ -20,7 +20,12 @@ let TaskItem = (props) => {
         </div>
 
         <div className="buttons-block">
-          <button className="TaskItem-btn-done">Задача выполнена</button>
+          <button
+            onClick={() => props.done(props.task.id)}
+            className="TaskItem-btn-done"
+          >
+            Задача выполнена
+          </button>
           <button onClick={() => onDelete()} className="TaskItem-btn">
             Удалить задачу
           </button>

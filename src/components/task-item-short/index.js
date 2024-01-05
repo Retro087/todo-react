@@ -6,16 +6,35 @@ let TaskItemShort = (props) => {
     let id = props.item.id;
     props.delete(id);
   };
+
   return (
     <div className="TaskItemShort">
-      <Link className="TaskItemShort-title" to={`/task/${props.item.id}`}>
+      {props.isDone ? (
         <p>{props.item.title}</p>
-      </Link>
+      ) : (
+        <Link className="TaskItemShort-title" to={`/task/${props.item.id}`}>
+          <p>{props.item.title}</p>
+        </Link>
+      )}
+
       <div className="buttons">
-        <button className="btn done">done</button>
-        <button onClick={() => onClick()} className="btn delete">
-          delete
-        </button>
+        {props.isDone ? (
+          <button onClick={() => onClick()} className="btn delete">
+            delete
+          </button>
+        ) : (
+          <>
+            <button
+              onClick={() => props.done(props.item.id)}
+              className="btn done"
+            >
+              done
+            </button>
+            <button onClick={() => onClick()} className="btn delete">
+              delete
+            </button>
+          </>
+        )}
       </div>
     </div>
   );

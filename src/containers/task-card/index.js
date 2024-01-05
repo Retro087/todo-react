@@ -31,6 +31,7 @@ let TaskCard = (props) => {
       [store]
     ),
     navigate: () => navigate("/"),
+    done: useCallback((id) => dispatch(tasksActions.doneTask(id)), [store]),
   };
 
   return (
@@ -40,6 +41,7 @@ let TaskCard = (props) => {
         navigate={callbacks.navigate}
         delete={callbacks.delete}
         task={select.task}
+        done={callbacks.done}
       />
     </div>
   );
