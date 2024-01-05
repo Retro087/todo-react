@@ -1,0 +1,42 @@
+.TaskItemShort{
+    box-sizing: border-box;
+    padding: 0 20px;
+    background-color: #D9F0F1;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    word-break: break-all;
+}
+
+.btn{
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.done{
+    background-color: #B3F08E;
+    border: none;
+}
+
+.delete{
+    border: none;
+    background-color: #F48A8A;
+}
+
+.buttons{
+    justify-content: end;
+    display: flex;
+    align-items: center;
+}
+
+.TaskItemShort-title{
+    max-width: 80%;
+}
+
+.TaskItemShort-title:hover{
+    text-decoration: underline;
+}

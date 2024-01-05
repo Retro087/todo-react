@@ -1,0 +1,14 @@
+.TasksList{
+    width: 70%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.title{
+    text-align: center;
+}
+
+.not-found{
+    margin-top: 50px;
+    text-align: center;
+}

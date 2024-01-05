@@ -1,0 +1,21 @@
+.Header{
+    height: 6vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
+.Header-user{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Header-icon{
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: aqua;
+    border-radius: 100px;
+}
