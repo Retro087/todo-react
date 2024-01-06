@@ -13,6 +13,8 @@ let TaskCard = (props) => {
     (state) => ({
       task: state.task.task,
       waiting: state.task.waiting,
+      profile: state.login.profile,
+      isAuth: state.login.isAuth,
     }),
     shallowEqual
   );
@@ -36,7 +38,7 @@ let TaskCard = (props) => {
 
   return (
     <div className="task-card">
-      <Header />
+      <Header profile={select.profile} isAuth={select.isAuth} />
       <TaskItem
         navigate={callbacks.navigate}
         delete={callbacks.delete}

@@ -13,6 +13,8 @@ let AddTaskForm = (props) => {
   const select = useSelector(
     (state) => ({
       tasks: state.tasks.tasks,
+      profile: state.login.profile,
+      isAuth: state.login.isAuth,
     }),
     shallowEqual
   );
@@ -29,7 +31,7 @@ let AddTaskForm = (props) => {
 
   return (
     <div className="main-side">
-      <Header />
+      <Header profile={select.profile} isAuth={select.isAuth} />
       <TaskForm navigate={callbacks.navigate} addTask={callbacks.addTask} />
     </div>
   );

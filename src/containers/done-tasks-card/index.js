@@ -11,6 +11,8 @@ let DoneTasksCard = (props) => {
   const select = useSelector(
     (state) => ({
       doneTasks: state.tasks.done,
+      profile: state.login.profile,
+      isAuth: state.login.isAuth,
     }),
     shallowEqual
   );
@@ -32,7 +34,7 @@ let DoneTasksCard = (props) => {
 
   return (
     <div className="main-side">
-      <Header />
+      <Header profile={select.profile} isAuth={select.isAuth} />
       <DoneList delete={callbacks.delete} done={select.doneTasks} />
     </div>
   );

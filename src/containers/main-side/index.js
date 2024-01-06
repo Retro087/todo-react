@@ -10,6 +10,8 @@ let MainSide = (props) => {
   const select = useSelector(
     (state) => ({
       tasks: state.tasks.tasks,
+      profile: state.login.profile,
+      isAuth: state.login.isAuth,
     }),
     shallowEqual
   );
@@ -32,7 +34,7 @@ let MainSide = (props) => {
 
   return (
     <div className="main-side">
-      <Header />
+      <Header profile={select.profile} isAuth={select.isAuth} />
       <TasksList
         addTask={callbacks.addTask}
         delete={callbacks.delete}
