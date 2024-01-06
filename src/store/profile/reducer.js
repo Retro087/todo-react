@@ -1,8 +1,7 @@
 import store from "..";
 
 export const initialState = {
-  profile: [],
-  isAuth: false,
+  profile: {},
   waiting: false, // признак ожидания загрузки
 };
 
@@ -10,7 +9,6 @@ export const initialState = {
 function reducer(state = initialState, action) {
   switch (action.type) {
     case "registration":
-      debugger;
       return {
         ...state,
         profile: { ...action.payload },

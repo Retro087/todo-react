@@ -6,6 +6,7 @@ import Task from "./task";
 import DoneTasks from "./done-tasks";
 import Login from "./login";
 import Protected from "../containers/protected";
+import Profile from "./profile";
 
 function App() {
   return (
@@ -40,6 +41,16 @@ function App() {
           element={
             <Protected redirect="/login">
               <DoneTasks />
+            </Protected>
+          }
+        />
+        <Route path={"/login"} element={<Login />} />
+
+        <Route
+          path={"/profile"}
+          element={
+            <Protected redirect="/login">
+              <Profile />
             </Protected>
           }
         />

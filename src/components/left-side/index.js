@@ -31,6 +31,15 @@ let LeftSideItems = (props) => {
       >
         Выполненные задачи
       </NavLink>
+
+      <NavLink
+        className={(navData) =>
+          navData.isActive ? "active" : "left-side-item"
+        }
+        to={"/profile"}
+      >
+        Профиль
+      </NavLink>
     </div>
   );
 };

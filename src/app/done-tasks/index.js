@@ -12,11 +12,6 @@ let DoneTasks = () => {
   const isAuth = useSelector((state) => state.login.isAuth, shallowEqual);
   const navigate = useNavigate();
 
-  useLayoutEffect(() => {
-    if (!isAuth) {
-      navigate("/login");
-    }
-  });
   return (
     <div className="add-task">
       <PageLayout>

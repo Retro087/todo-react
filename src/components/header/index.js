@@ -6,8 +6,18 @@ let Header = (props) => {
     <div className="Header">
       {props.isAuth ? (
         <div className="Header-user">
-          <span className="Header-name">{props.profile.name}</span>
-          <div className="Header-icon">{props.profile.icon}</div>
+          <Link to="/profile">
+            <span className="Header-name">{props.profile.name}</span>
+          </Link>
+
+          {props.profile.photo ? (
+            <img
+              className="photo"
+              src={URL.createObjectURL(props.profile.photo)}
+            />
+          ) : (
+            <div className="Header-icon"></div>
+          )}
         </div>
       ) : (
         <Link to="/login">Войти</Link>
